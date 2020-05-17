@@ -5,7 +5,7 @@
  ******************************************************************************
  */
 
-package com.virallalakia.leetcode.may2020challenge;
+package com.virallalakia.leetcode.year2020.may2020challenge;
 
 /*
  * This is a solution for one of the problems for LeetCode May Challenge 2020.

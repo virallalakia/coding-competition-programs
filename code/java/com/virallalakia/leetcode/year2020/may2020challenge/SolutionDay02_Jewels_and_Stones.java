@@ -5,24 +5,28 @@
  ******************************************************************************
  */
 
-package com.virallalakia.leetcode.may2020challenge;
+package com.virallalakia.leetcode.year2020.may2020challenge;
 
 /*
  * This is a solution for one of the problems for LeetCode May Challenge 2020.
  * Competition: LeetCode May Challenge 2020
- * Problem: Problem 4 (Number Complement)
+ * Problem: Problem 2 (Jewels and Stones)
  * Result: Pass
  * Year: 2020
  */
 
-public class SolutionDay04_Number_Complement {
-  public int findComplement(int n) {
-    byte c = 0;
-    int r = n;
-    while (r > 0) {
-      c++;
-      r >>= 1;
+public class SolutionDay02_Jewels_and_Stones {
+  public int numJewelsInStones(String J, String S) {
+    if (J == null || S == null || "".equals(J) || "".equals(S)) {
+      return 0;
     }
-    return ((1 << c) - 1) ^ n;
+
+    int r = 0;
+    for (int i = 0; i < S.length(); i++) {
+      if (J.contains(S.substring(i, i + 1))) {
+        r++;
+      }
+    }
+    return r;
   }
 }

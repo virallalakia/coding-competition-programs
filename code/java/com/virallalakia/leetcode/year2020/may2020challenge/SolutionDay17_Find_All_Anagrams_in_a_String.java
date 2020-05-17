@@ -5,7 +5,7 @@
  ******************************************************************************
  */
 
-package com.virallalakia.leetcode.may2020challenge;
+package com.virallalakia.leetcode.year2020.may2020challenge;
 
 import java.util.ArrayList;
 import java.util.Arrays;

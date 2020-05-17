@@ -5,28 +5,20 @@
  ******************************************************************************
  */
 
-package com.virallalakia.leetcode.may2020challenge;
+package com.virallalakia.leetcode.year2020.may2020challenge;
 
 /*
  * This is a solution for one of the problems for LeetCode May Challenge 2020.
  * Competition: LeetCode May Challenge 2020
- * Problem: Problem 2 (Jewels and Stones)
+ * Problem: Problem 9 (Valid Perfect Square)
  * Result: Pass
  * Year: 2020
  */
-
-public class SolutionDay02_Jewels_and_Stones {
-  public int numJewelsInStones(String J, String S) {
-    if (J == null || S == null || "".equals(J) || "".equals(S)) {
-      return 0;
+public class SolutionDay09_Valid_Perfect_Square {
+  public boolean isPerfectSquare(int n) {
+    int i = 0;
+    for (i = 0; i * i < n && i * i >= 0; i++) {
     }
-
-    int r = 0;
-    for (int i = 0; i < S.length(); i++) {
-      if (J.contains(S.substring(i, i + 1))) {
-        r++;
-      }
-    }
-    return r;
+    return (i * i == n);
   }
 }

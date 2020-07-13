@@ -2,7 +2,7 @@
 This repo contains programs submitted in different coding competitions. This includes below main compititions:
 * Google
   * Google Code Jam 2020 (Rounds: Qualification, 1a, 1b, 1c)
-  * Google Kick Start 2020 (Rounds: C)
+  * Google Kick Start 2020 (Rounds: C, D)
 * LeetCode
   * Year 2020
 

@@ -7,6 +7,9 @@
 
 package com.virallalakia.leetcode.year2020.may2020challenge;
 
+import java.util.*;
+import java.util.stream.IntStream;
+
 /*
  * This is a solution for one of the problems for LeetCode May Challenge 2020.
  * Competition: LeetCode May Challenge 2020

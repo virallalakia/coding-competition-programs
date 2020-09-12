@@ -23,7 +23,7 @@ public class ClosestToTheRight_BinarySearch {
       new Scanner(new BufferedReader(new InputStreamReader(System.in)));
 
   /**
-   * Main method for solution. Calls to evaluate one of more test cases.
+   * Main method for solution. Calls to evaluate one or more test cases.
    */
   public static void main(String[] args) {
     evaluateCase();

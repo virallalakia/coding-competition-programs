@@ -12,12 +12,12 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * This is a solution for ClosestToTheLeft(BinarySearch) problem of Codeforces.
+ * This is a solution for ClosestToTheRight(BinarySearch) problem of Codeforces.
  * This is verified on https://codeforces.com. Package definition needs to be removed before submission.
  * 
  * @author Viral Lalakia 
  */
-public class ClosestToTheLeft_BinarySearch {
+public class ClosestToTheRight_BinarySearch {
 
   private static final Scanner SYS_IN =
       new Scanner(new BufferedReader(new InputStreamReader(System.in)));
@@ -54,33 +54,33 @@ public class ClosestToTheLeft_BinarySearch {
 
   /**
    * BinarySearch algorithm for non-decreasing nums.
-   * Returns the maximum index (starting from 1) of an array element not greater
-   * than the given one. If there are none, returns 0.
+   * Returns the minimum index (starting from 1) of an array element not less
+   * than the given one. If there are none, returns array-length + 1.
    * 
    * @param nums array of non-decreasing numbers (ints)
    * @param k number to binarySearch in nums array
    * 
-   * @return Maximum index (starting from 1) of an array element not greater
-   * than k, 0 otherwise
+   * @return Minimum index (starting from 1) of an array element not less than
+   * k, array-length + 1 otherwise
    */
   private static int binarySearch(int[] nums, int k) {
     if (nums == null) {
       return 0;
     }
 
-    // invariants: nums[lo] <= k and nums[hi] > k
-    // so lo will be the 0 based index for answer
+    // invariants: nums[lo] < k and nums[hi] >= k
+    // so hi will be the 0 based index for answer
     int lo = -1;
     int hi = nums.length;
     int m;
     while (lo + 1 < hi) {
       m = lo + (hi - lo) / 2; // alternative way of using (lo + hi) / 2 might overflow
-      if (nums[m] <= k) {
+      if (nums[m] < k) {
         lo = m;
       } else {
         hi = m;
       }
     }
-    return lo + 1; // return 1 based index as answer
+    return hi + 1; // return 1 based index as answer
   }
 }

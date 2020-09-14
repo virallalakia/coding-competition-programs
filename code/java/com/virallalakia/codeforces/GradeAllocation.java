@@ -17,7 +17,7 @@ import java.util.Scanner;
  * 
  * @author Viral Lalakia 
  */
-public class YetAnotherTwoIntegersProblem {
+public class GradeAllocation {
 
   private static final Scanner SYS_IN =
       new Scanner(new BufferedReader(new InputStreamReader(System.in)));

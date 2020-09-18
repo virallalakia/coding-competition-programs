@@ -62,7 +62,7 @@ public class VeryEasyTask {
       int sz = pattern.size();
       int max = pattern.get(sz - 1);
       if (n >= sz) {
-        ans += ((long)n) * max / sz;
+        ans += (long)max * (long)(n / sz);
         n %= sz;
       }
       if (n > 0) {

@@ -51,8 +51,8 @@ public class ChildrenHoliday {
       int[] temp = new int[n];
       // f(lo) is always false
       // f(hi) is always true
-      int lo = 0;
-      int hi = 1 << 31 - 1;
+      int lo = -1;
+      int hi = 1 << 31 - 2;
       int[] ans = temp;
       int m;
       while (lo + 1 < hi) {
@@ -67,16 +67,17 @@ public class ChildrenHoliday {
       }
       System.out.println(hi);
       for (int ni = 0; ni < n - 1; ni++) {
-        System.out.print(String.format("%d ", ans[ni]));
+        System.out.printf("%d ", Math.min(b, ans[ni]));
+        b = Math.max(0, b - ans[ni]);
       }
-      System.out.println(ans[n - 1]);
-    } catch (Exception e) {}
+      System.out.println(Math.min(b, ans[n - 1]));
+    } catch (Exception ignored) {}
   }
 
   private static boolean predicate(int m, int b, int n, int[] t, int[] z, int[] y, int[] ans) {
     int count = 0;
     for (int ni = 0; ni < n; ni++) {
-      int k = m + y[ni] / (t[ni] * z[ni] + y[ni]);
+      int k = (m + y[ni]) / (t[ni] * z[ni] + y[ni]);
       ans[ni] = k * z[ni] + Math.max(0, (m - k * (t[ni] * z[ni] + y[ni])) / t[ni]);
       count += ans[ni];
     }

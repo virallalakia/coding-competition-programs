@@ -56,6 +56,6 @@ public class Equation {
   }
 
   private static boolean predicate(double m, double c) {
-    return (m * m + Math.sqrt(m)) < c;
+    return c < (m * m + Math.sqrt(m));
   }
 }

@@ -44,7 +44,7 @@ public class PokemonArmyEasyVersion {
       int prev = SYS_IN.nextInt();
       int cur;
       n--;
-      int ans = 0;
+      long ans = 0;
       int mn;
       if (n == 0) {
         ans = prev;
@@ -56,7 +56,7 @@ public class PokemonArmyEasyVersion {
           cur = SYS_IN.nextInt();
           n--;
         }
-        ans = prev;
+        ans = Math.max(prev, cur);
         prev = cur;
         while (n > 0) {
           while (n > 0 && prev >= cur) {
@@ -64,14 +64,14 @@ public class PokemonArmyEasyVersion {
             cur = SYS_IN.nextInt();
             n--;
           }
-          mn = prev;
+          mn = Math.min(prev, cur);
           prev = cur;
           while (n > 0 && prev <= cur) {
             prev = cur;
             cur = SYS_IN.nextInt();
             n--;
           }
-          ans += Math.max(0, prev - mn);
+          ans += Math.max(0, Math.max(prev, cur) - mn);
         }
       }
       SYS_IN.nextLine();

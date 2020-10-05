@@ -26,10 +26,7 @@ public class Party {
    * Main method for solution. Calls to evaluate one or more test cases.
    */
   public static void main(String[] args) {
-    final int t = SYS_IN.nextInt(); // total test cases
-    for (int ti = 0; ti < t; ti++) {
-      evaluateCase();
-    }
+    evaluateCase();
     SYS_IN.close();
   }
 
@@ -41,7 +38,6 @@ public class Party {
       int n = SYS_IN.nextInt();
       SYS_IN.nextLine();
       int[] parent = new int[n];
-      int[] groupCounts = new int[n];
       for (int ni = 0; ni < n; ni++) {
         parent[ni] = SYS_IN.nextInt() - 1;
         if (parent[ni] == -2) {

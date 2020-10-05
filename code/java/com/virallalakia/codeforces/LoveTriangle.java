@@ -44,6 +44,7 @@ public class LoveTriangle {
       SYS_IN.nextLine();
 
       boolean[] visited = new boolean[n];
+      boolean[] checked = new boolean[n];
       boolean ans = false;
       int c = 0;
       for (int ni = 0; ni < n && c < n && !ans; ni++) {
@@ -53,16 +54,20 @@ public class LoveTriangle {
         visited[ni] = true;
         c++;
         int tmp = nums[ni];
-        while (tmp != ni && c < n) {
+        while (true) {
           if (visited[tmp]) {
-            int tc = 1;
-            int tmp2 = nums[tmp];
-            while (tmp2 != tmp) {
-              tc++;
-              tmp2 = nums[tmp];
-            }
-            if (tc == 3) {
-              ans = true;
+            if (!checked[nums[tmp]]) {
+              int tc = 1;
+              int tmp2 = nums[tmp];
+              checked[tmp] = true;
+              while (tmp2 != tmp && tc <= 3) {
+                checked[tmp2] = true;
+                tc++;
+                tmp2 = nums[tmp2];
+              }
+              if (tc == 3) {
+                ans = true;
+              }
             }
             break;
           }

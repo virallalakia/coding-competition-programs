@@ -9,21 +9,21 @@ package com.virallalakia.leetcode;
 
 /**
  * This is a solution for Add Two Numbers problem of Leetcode.
- * This is verified on https://leetcode.com. Package definition needs to be removed before submission.
+ * This is verified on https://leetcode.com. Only marked code should be submitted.
  * 
  * @author Viral Lalakia 
  */
-/*
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-class Solution {
+public class AddTwoNumbers {
+
+  static class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  }
+
+  // ======== submission start ========
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode ans = new ListNode();
     ListNode ansHead = ans;
@@ -47,4 +47,5 @@ class Solution {
     }
     return ansHead.next;
   }
+  // ======== submission end ========
 }

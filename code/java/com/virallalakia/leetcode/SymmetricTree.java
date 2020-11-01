@@ -7,28 +7,30 @@
 
 package com.virallalakia.leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This is a solution for Symmetric Tree problem of Leetcode.
- * This is verified on https://leetcode.com. Package definition needs to be removed before submission.
+ * This is verified on https://leetcode.com. Only marked code should be submitted.
  * 
  * @author Viral Lalakia 
  */
-/*
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
-class Solution {
+public class SymmetricTree {
+  static class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+      this.val = val;
+      this.left = left;
+      this.right = right;
+    }
+  }
+
+  // ======== submission start ========
   public boolean isSymmetric(TreeNode root) {
     List<Integer> inOrderList = inOrder(root, 0);
     int i = 0;
@@ -56,4 +58,5 @@ class Solution {
     }
     return ans;
   }
+  // ======== submission end ========
 }

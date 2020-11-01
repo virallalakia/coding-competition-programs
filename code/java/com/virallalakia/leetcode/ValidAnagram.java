@@ -9,11 +9,12 @@ package com.virallalakia.leetcode;
 
 /**
  * This is a solution for Valid Anagram problem of Leetcode.
- * This is verified on https://leetcode.com. Package definition needs to be removed before submission.
+ * This is verified on https://leetcode.com. Only marked code should be submitted.
  * 
  * @author Viral Lalakia 
  */
-class Solution {
+public class ValidAnagram {
+  // ======== submission start ========
   public boolean isAnagram(String s, String t) {
     if (s == null || t == null) {
       return s == t;
@@ -34,4 +35,5 @@ class Solution {
     }
     return true;
   }
+  // ======== submission end ========
 }

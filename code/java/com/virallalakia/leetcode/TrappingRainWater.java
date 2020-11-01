@@ -9,11 +9,12 @@ package com.virallalakia.leetcode;
 
 /**
  * This is a solution for Trapping Rain Water problem of Leetcode.
- * This is verified on https://leetcode.com. Package definition needs to be removed before submission.
+ * This is verified on https://leetcode.com. Only marked code should be submitted.
  * 
  * @author Viral Lalakia 
  */
-class Solution {
+public class TrappingRainWater {
+  // ======== submission start ========
   public int trap(int[] height) {
     if (height == null || height.length < 3) {
       return 0;
@@ -34,4 +35,5 @@ class Solution {
     }
     return ans;
   }
+  // ======== submission end ========
 }

@@ -7,13 +7,16 @@
 
 package com.virallalakia.leetcode;
 
+import java.util.Arrays;
+
 /**
  * This is a solution for Coin Change problem of Leetcode.
- * This is verified on https://leetcode.com. Package definition needs to be removed before submission.
+ * This is verified on https://leetcode.com. Only marked code should be submitted.
  * 
  * @author Viral Lalakia 
  */
-class Solution {
+public class CoinChange {
+  // ======== submission start ========
   public int coinChange(int[] coins, int amount) {
     if (amount == 0) {
       return 0;
@@ -46,4 +49,5 @@ class Solution {
     }
     return reqCoins[amount];
   }
+  // ======== submission end ========
 }

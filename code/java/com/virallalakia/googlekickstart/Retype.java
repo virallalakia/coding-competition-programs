@@ -14,10 +14,10 @@ import java.util.Scanner;
 /*
  * This is a solution for one of the problems for Google Kick Start. This is verified on Google Kick Start site.
  * Package definition needs to be removed and class name needs to be changed to 'Solution' before submission.
- * Competition: Google Kick Start 2020 - Round B
- * Problem: Problem A (Bike Tour)
+ * Competition: Google Kick Start 2020 - Round H
+ * Problem: Problem A (Retype)
  */
-public class BikeTour {
+public class Retype {
 
   private static final Scanner SYS_IN =
       new Scanner(new BufferedReader(new InputStreamReader(System.in)));
@@ -33,24 +33,12 @@ public class BikeTour {
 
   private static void evaluateCase(final int t) {
     try {
-      int n = SYS_IN.nextInt();
-      SYS_IN.nextLine();
-      int cur, prev1, prev2;
-      int ans = 0;
-      n -= 2;
-      prev2 = SYS_IN.nextInt();
-      prev1 = SYS_IN.nextInt();
-      for (int ni = 0; ni < n; ni++) {
-          cur = SYS_IN.nextInt();
-          if (prev1 > prev2 && prev1 > cur) {
-            ans++;
-          }
-          prev2 = prev1;
-          prev1 = cur;
-      }
+      long n = SYS_IN.nextLong();
+      long k = SYS_IN.nextLong();
+      long s = SYS_IN.nextLong();
       SYS_IN.nextLine();
 
-      System.out.println("Case #" + t + ": " + ans);
+      System.out.println("Case #" + t + ": " + (k + n + Math.min(0, k - s - s)));
     } catch (Exception e) {
     }
   }
